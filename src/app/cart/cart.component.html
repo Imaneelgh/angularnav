@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" routerLink="/">
+    <i class="fas fa-book"></i> Bookstore
+  </a>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+</nav>
+<div>
+  <h2 class="text-center" ><i class="fas fa-shopping-cart"></i> Mon panier</h2>
+
+  <div *ngIf="cartItems.length === 0">
+    <p>Votre panier est vide.</p>
+  </div>
+
+  <ul *ngIf="cartItems.length > 0">
+    <li *ngFor="let item of cartItems">
+      <img [src]="item.image" alt="Image du livre" class="img-fluid">
+      {{ item.title }} - {{ item.price | currency }}
+      <button (click)="removeItem(item)"><i class="fa fa-trash"></i> Supprimer</button>
+    </li>
+  </ul>
+
+  <div *ngIf="cartItems.length > 0">
+    <p>Total: {{ getTotal() | currency }}</p>
+    <button (click)="showCheckout = true" class="btn btn-primary"><i class="fas fa-check"></i> Passer la commande</button>
+    <br>
+  </div>
+</div>
+<br> <br>
+<div *ngIf="showCheckout">
+  <h2 class="text-center"><i class="fas fa-clipboard"></i> Passer la commande</h2>
+  <form>
+    <div class="form-group">
+      <label for="name"><i class="fas fa-user"></i> Nom complet</label>
+      <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="address"><i class="fas fa-map-marker-alt"></i> Adresse de livraison</label>
+      <input type="text" class="form-control" id="address" name="address" required>
+    </div>
+    <div class="form-group">
+      <label for="phone"><i class="fas fa-phone"></i> Numéro de téléphone</label>
+      <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]{10}" required>
+    </div>
+    <div class="form-group">
+      <label for="email"><i class="fas fa-envelope"></i> Adresse email</label>
+      <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+          
+    <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Valider la commande</button>
+    <br>
+  </form>
+</div>

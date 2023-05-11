@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="{{ book.image }}" class="img-fluid">
+      </div>
+      <div class="col-md-8">
+        <h2>{{ book.title }}</h2>
+        <p>{{ book.author }}</p>
+        <p>{{ book.description }}</p>
+        <p>${{ book.price }}</p>
+        <button class="btn btn-primary" (click)="addToCart(book)">Ajouter au panier</button>
+      </div>
+    </div>
+  </div>
+  

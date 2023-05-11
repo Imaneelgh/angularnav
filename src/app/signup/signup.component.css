@@ -1,0 +1,184 @@
+.navbar {
+    background-color: #f8f9fa;
+  }
+  
+  .nav-link {
+    color: #6c757d !important;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 10px;
+  }
+  
+  .navbar-brand {
+    color: #007bff !important;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+.container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #333;
+    animation: slideInDown 1s ease-in-out;
+  }
+  
+  @keyframes slideInDown {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  /* Style des icônes */
+.form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    pointer-events: none;
+    color: #ccc;
+  }
+  
+  /* Animation du champ de saisie lorsqu'il est en focus */
+  .form-control:focus {
+    box-shadow: none;
+    border-color: #1abc9c;
+  }
+  
+  .form-control:focus + .form-control-feedback {
+    color: #1abc9c;
+  }
+  
+  /* Style des champs de saisie */
+  .form-control {
+    position: relative;
+    font-size: 16px;
+    padding: 10px 10px 10px 40px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    transition: all .3s;
+  }
+  
+  /* Style des boutons */
+  .btn-primary {
+    background-color: #1abc9c;
+    border-color: #1abc9c;
+    color: #fff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #16a085;
+    border-color: #16a085;
+  }
+  
+  /* Style du formulaire */
+  .form {
+    max-width: 600px;
+    margin: auto;
+    padding: 50px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    animation-name: formAnimation;
+    animation-duration: 1s;
+  }
+  
+  /* Animation du formulaire */
+  @keyframes formAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Style du bouton pour l'envoi du formulaire */
+  .form-btn {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  /* Style de la zone de téléchargement de fichier */
+  .file-upload {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .file-upload input[type="file"] {
+    display: none;
+  }
+  
+  .file-upload label {
+    margin-left: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all .3s;
+  }
+  
+  .file-upload label:hover {
+    color: #1abc9c;
+  }
+  
+  .file-upload img {
+    margin-right: 10px;
+    max-height: 50px;
+    object-fit: cover;
+  }
+    

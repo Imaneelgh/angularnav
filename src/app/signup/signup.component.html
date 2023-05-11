@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" routerLink="/">
+    <i class="fas fa-book"></i> Bookstore
+  </a>
+</nav>
+<div class="container">
+  <h1>Inscription</h1>
+  <form>
+    <div class="form-group">
+      <label for="username"><i class="fas fa-user"></i> Nom d'utilisateur</label>
+      <input type="text" class="form-control" id="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="email"><i class="fas fa-envelope"></i> Adresse email</label>
+      <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="password"><i class="fas fa-lock"></i> Mot de passe</label>
+      <input type="password" class="form-control" id="password" name="password" required>
+    </div>
+    <div class="form-group">
+      <label for="confirm-password"><i class="fas fa-lock"></i> Confirmer le mot de passe</label>
+      <input type="password" class="form-control" id="confirm-password" name="confirm-password" required>
+    </div>
+    <div class="form-group">
+      <label for="avatar"><i class="fas fa-image"></i> Avatar</label>
+      <input type="file" class="form-control-file" id="avatar" name="avatar">
+    </div>
+    <button type="submit" class="btn btn-primary"><i class="fas fa-user-plus"></i> S'inscrire</button>
+  </form>
+</div>
