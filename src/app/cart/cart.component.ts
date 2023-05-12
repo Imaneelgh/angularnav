@@ -32,7 +32,6 @@ export class CartComponent {
   }
 
   checkout() {
-    // Code to handle checkout process
   }
 
   showCheckout = false;

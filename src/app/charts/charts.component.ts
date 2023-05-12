@@ -11,7 +11,6 @@ export class ChartsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    // your chart configuration code here
   }
 
 }
